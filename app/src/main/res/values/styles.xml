@@ -30,6 +30,16 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/playerTextSize</item>
+        <item name="android:textColor">@color/playerTextColor</item>
+        <item name="android:background"></item>
+    </style>
+
+    <style name="imageBoard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_below">@id/Players</item>
     </style>
 
 </resources>

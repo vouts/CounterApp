@@ -9,6 +9,7 @@
 
 
         <RelativeLayout style="@style/basicStyle">
+
             <LinearLayout
                 android:id="@+id/Players"
                 style="@style/players">
@@ -18,19 +19,39 @@
                     style="@style/player">
 
                     <TextView
-                        style="@style/playerStyle"
                         android:id="@+id/namePlayerA"
-                        android:text="@string/namePlayerA"/>
+                        style="@style/playerStyle"
+                        android:text="@string/namePlayerA" />
+
+                    <TextView
+                        android:id="@+id/scorePlayerA"
+                        style="@style/playerStyle"
+                        android:text="@string/scorePlayerA" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/playerB"
+                    style="@style/player">
+
+                    <TextView
+                        android:id="@+id/namePlayerB"
+                        style="@style/playerStyle"
+                        android:text="@string/namePlayerB" />
+
+                    <TextView
+                        android:id="@+id/scorePlayerB"
+                        style="@style/playerStyle"
+                        android:text="@string/scorePlayerB" />
 
                 </LinearLayout>
 
             </LinearLayout>
+            <ImageView
+                style="@style/imageBoard"
+                android:src="@drawable/dartboard"/>
 
         </RelativeLayout>
-
-
-
-
 
 
     </ScrollView>

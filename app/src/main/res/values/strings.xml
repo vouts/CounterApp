@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CounterApp</string>
     <string name="namePlayerA">Player A</string>
+    <string name="scorePlayerA">0</string>
+    <string name="namePlayerB">Player B</string>
+    <string name="scorePlayerB">0</string>
 </resources>
