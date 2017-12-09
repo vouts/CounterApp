@@ -215,39 +215,10 @@
 
             </LinearLayout>
 
+
+
             <LinearLayout
                 android:id="@+id/buttonsRow5"
-                style="@style/buttonsRow">
-
-                <Button
-                    android:id="@+id/twentyOne"
-                    style="@style/buttons"
-                    android:text="@string/twentyOne" />
-
-                <Button
-                    android:id="@+id/twentyTwo"
-                    style="@style/buttons"
-                    android:text="@string/twentyTwo" />
-
-                <Button
-                    android:id="@+id/twentyThree"
-                    style="@style/buttons"
-                    android:text="@string/twentyThree" />
-
-                <Button
-                    android:id="@+id/twentyFour"
-                    style="@style/buttons"
-                    android:text="@string/twentyFour" />
-
-                <Button
-                    android:id="@+id/twentyFive"
-                    style="@style/buttons"
-                    android:text="@string/twentyFive" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/buttonsRow6"
                 style="@style/buttonsRow">
 
                 <Button
