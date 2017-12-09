@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="playerTextSize">15sp</dimen>
+    <dimen name="playerTextSize">14sp</dimen>
+    <dimen name="buttonSize">10sp</dimen>
     <dimen name="buttonMarginLeft">1dp</dimen>
     <dimen name="buttonMarginRight">1dp</dimen>
     <dimen name="buttonMarginTop">1dp</dimen>

@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#008f90</color>
     <color name="colorAccent">#FF4081</color>
     <color name="playerTextColor">#000000</color>
-    <color name="currentPlayerBG">#18c0c0</color>
+    <color name="currentPlayerBG">#81c784</color>
+    <color name="buttonColor">#51c0c0</color>
 </resources>
