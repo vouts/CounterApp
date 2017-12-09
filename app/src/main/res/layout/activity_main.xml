@@ -47,9 +47,224 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <ImageView
+                android:id="@+id/dartsBoard"
                 style="@style/imageBoard"
-                android:src="@drawable/dartboard"/>
+                android:src="@drawable/dartboard" />
+
+            <LinearLayout
+                android:id="@+id/buttonArea"
+                style="@style/buttonArea">
+
+                <LinearLayout
+                    android:id="@+id/specialButtons"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/plusOne"
+                        style="@style/buttons"
+                        android:text="@string/plusOne" />
+
+                    <Button
+                        android:id="@+id/plusTwo"
+                        style="@style/buttons"
+                        android:text="@string/plusTwo" />
+
+                    <Button
+                        android:id="@+id/plusThree"
+                        style="@style/buttons"
+                        android:text="@string/plusThree" />
+
+                    <Button
+                        android:id="@+id/soClose"
+                        style="@style/buttons"
+                        android:text="@string/soClose" />
+
+                    <Button
+                        android:id="@+id/bullsEye"
+                        style="@style/buttons"
+                        android:text="@string/bullsEye" />
+
+                    <Button
+                        android:id="@+id/zero"
+                        style="@style/buttons"
+                        android:text="@string/zero" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow1"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/one"
+                        style="@style/buttons"
+                        android:text="@string/one" />
+
+                    <Button
+                        android:id="@+id/two"
+                        style="@style/buttons"
+                        android:text="@string/two" />
+
+                    <Button
+                        android:id="@+id/three"
+                        style="@style/buttons"
+                        android:text="@string/three" />
+
+                    <Button
+                        android:id="@+id/four"
+                        style="@style/buttons"
+                        android:text="@string/four" />
+
+                    <Button
+                        android:id="@+id/five"
+                        style="@style/buttons"
+                        android:text="@string/five" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow2"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/six"
+                        style="@style/buttons"
+                        android:text="@string/six" />
+
+                    <Button
+                        android:id="@+id/seven"
+                        style="@style/buttons"
+                        android:text="@string/seven" />
+
+                    <Button
+                        android:id="@+id/eight"
+                        style="@style/buttons"
+                        android:text="@string/eight" />
+
+                    <Button
+                        android:id="@+id/nine"
+                        style="@style/buttons"
+                        android:text="@string/nine" />
+
+                    <Button
+                        android:id="@+id/ten"
+                        style="@style/buttons"
+                        android:text="@string/ten" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow3"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/eleven"
+                        style="@style/buttons"
+                        android:text="@string/eleven" />
+
+                    <Button
+                        android:id="@+id/twelve"
+                        style="@style/buttons"
+                        android:text="@string/twelve" />
+
+                    <Button
+                        android:id="@+id/thirteen"
+                        style="@style/buttons"
+                        android:text="@string/thirteen" />
+
+                    <Button
+                        android:id="@+id/fourteen"
+                        style="@style/buttons"
+                        android:text="@string/fourteen" />
+
+                    <Button
+                        android:id="@+id/fifteen"
+                        style="@style/buttons"
+                        android:text="@string/fifteen" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow4"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/sixteen"
+                        style="@style/buttons"
+                        android:text="@string/sixteen" />
+
+                    <Button
+                        android:id="@+id/seventeen"
+                        style="@style/buttons"
+                        android:text="@string/seventeen" />
+
+                    <Button
+                        android:id="@+id/eighteen"
+                        style="@style/buttons"
+                        android:text="@string/eighteen" />
+
+                    <Button
+                        android:id="@+id/nineteen"
+                        style="@style/buttons"
+                        android:text="@string/nineteen" />
+
+                    <Button
+                        android:id="@+id/twenty"
+                        style="@style/buttons"
+                        android:text="@string/twenty" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow5"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/twentyOne"
+                        style="@style/buttons"
+                        android:text="@string/twentyOne" />
+
+                    <Button
+                        android:id="@+id/twentyTwo"
+                        style="@style/buttons"
+                        android:text="@string/twentyTwo" />
+
+                    <Button
+                        android:id="@+id/twentyThree"
+                        style="@style/buttons"
+                        android:text="@string/twentyThree" />
+
+                    <Button
+                        android:id="@+id/twentyFour"
+                        style="@style/buttons"
+                        android:text="@string/twentyFour" />
+
+                    <Button
+                        android:id="@+id/twentyFive"
+                        style="@style/buttons"
+                        android:text="@string/twentyFive" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow6"
+                    style="@style/buttonsRow">
+
+                    <Button
+                        android:id="@+id/reset"
+                        style="@style/buttons"
+                        android:text="@string/reset" />
+
+                    <Button
+                        android:id="@+id/reenter"
+                        style="@style/buttons"
+                        android:text="@string/reenter" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
 
