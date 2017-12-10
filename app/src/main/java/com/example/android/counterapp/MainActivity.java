@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         scorePlayerA = 301;
         shotsLeft = 3;
         currentTurnScore = 0;
+
         winner = false;
 
         printShotsPlayerA(Integer.toString(shotsLeft));
