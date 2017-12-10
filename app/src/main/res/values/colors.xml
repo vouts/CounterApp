@@ -6,4 +6,5 @@
     <color name="playerTextColor">#000000</color>
     <color name="currentPlayerBG">#81c784</color>
     <color name="buttonColor">#51c0c0</color>
+    <color name="white">#FFFFFF</color>
 </resources>

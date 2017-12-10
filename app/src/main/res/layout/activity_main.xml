@@ -13,6 +13,26 @@
             style="@style/players">
 
             <LinearLayout
+                android:id="@+id/titles"
+                style="@style/titles">
+
+                <TextView
+                    android:id="@+id/playersTitle"
+                    style="@style/playerStyle"
+                    android:text="@string/playersTitle" />
+
+                <TextView
+                    android:id="@+id/ScoreTitle"
+                    style="@style/playerStyle"
+                    android:text="@string/playersScore" />
+
+                <TextView
+                    android:id="@+id/ShotsTitle"
+                    style="@style/playerStyle"
+                    android:text="@string/playersShots" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/playerA"
                 style="@style/player">
 
@@ -25,6 +45,11 @@
                     android:id="@+id/scorePlayerA"
                     style="@style/playerStyle"
                     android:text="@string/scorePlayerA" />
+
+                <TextView
+                    android:id="@+id/shotsPlayerA"
+                    style="@style/playerStyle"
+                    android:text="@string/shotsPlayerA" />
 
             </LinearLayout>
 
@@ -41,6 +66,11 @@
                     android:id="@+id/scorePlayerB"
                     style="@style/playerStyle"
                     android:text="@string/scorePlayerB" />
+
+                <TextView
+                    android:id="@+id/shotsPlayerB"
+                    style="@style/playerStyle"
+                    android:text="@string/shotsPlayerB" />
 
             </LinearLayout>
 
@@ -60,33 +90,45 @@
                 style="@style/buttonsRow">
 
                 <Button
+                    android:id="@+id/reset"
+                    style="@style/buttons"
+                    android:onClick="reset"
+                    android:text="@string/reset" />
+
+                <Button
                     android:id="@+id/plusOne"
                     style="@style/buttons"
+                    android:onClick="setPlusOne"
                     android:text="@string/plusOne" />
 
                 <Button
                     android:id="@+id/plusTwo"
                     style="@style/buttons"
+                    android:onClick="setPlusTwo"
                     android:text="@string/plusTwo" />
 
                 <Button
                     android:id="@+id/plusThree"
                     style="@style/buttons"
+                    android:onClick="setPlusThree"
                     android:text="@string/plusThree" />
 
                 <Button
                     android:id="@+id/soClose"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/soClose" />
 
                 <Button
                     android:id="@+id/bullsEye"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/bullsEye" />
 
                 <Button
                     android:id="@+id/zero"
                     style="@style/buttons"
+                    android:onClick="zero"
                     android:text="@string/zero" />
 
             </LinearLayout>
@@ -98,26 +140,31 @@
                 <Button
                     android:id="@+id/one"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/one" />
 
                 <Button
                     android:id="@+id/two"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/two" />
 
                 <Button
                     android:id="@+id/three"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/three" />
 
                 <Button
                     android:id="@+id/four"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/four" />
 
                 <Button
                     android:id="@+id/five"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/five" />
 
             </LinearLayout>
@@ -129,26 +176,31 @@
                 <Button
                     android:id="@+id/six"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/six" />
 
                 <Button
                     android:id="@+id/seven"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/seven" />
 
                 <Button
                     android:id="@+id/eight"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/eight" />
 
                 <Button
                     android:id="@+id/nine"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/nine" />
 
                 <Button
                     android:id="@+id/ten"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/ten" />
 
             </LinearLayout>
@@ -160,26 +212,31 @@
                 <Button
                     android:id="@+id/eleven"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/eleven" />
 
                 <Button
                     android:id="@+id/twelve"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/twelve" />
 
                 <Button
                     android:id="@+id/thirteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/thirteen" />
 
                 <Button
                     android:id="@+id/fourteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/fourteen" />
 
                 <Button
                     android:id="@+id/fifteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/fifteen" />
 
             </LinearLayout>
@@ -191,45 +248,40 @@
                 <Button
                     android:id="@+id/sixteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/sixteen" />
 
                 <Button
                     android:id="@+id/seventeen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/seventeen" />
 
                 <Button
                     android:id="@+id/eighteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/eighteen" />
 
                 <Button
                     android:id="@+id/nineteen"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/nineteen" />
 
                 <Button
                     android:id="@+id/twenty"
                     style="@style/buttons"
+                    android:onClick="getNumberFromText"
                     android:text="@string/twenty" />
 
             </LinearLayout>
-
 
 
             <LinearLayout
                 android:id="@+id/buttonsRow5"
                 style="@style/buttonsRow">
 
-                <Button
-                    android:id="@+id/reset"
-                    style="@style/buttons"
-                    android:text="@string/reset" />
-
-                <Button
-                    android:id="@+id/reenter"
-                    style="@style/buttons"
-                    android:text="@string/reenter" />
 
             </LinearLayout>
 

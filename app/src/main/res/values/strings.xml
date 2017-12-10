@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">CounterApp</string>
+    <string name="app_name">Darts Game Counter</string>
+    <string name="playersTitle">Players</string>
+    <string name="playersScore">Score</string>
+    <string name="playersShots">Darts left</string>
     <string name="namePlayerA">Player A</string>
-    <string name="scorePlayerA">0</string>
+    <string name="scorePlayerA">301</string>
+    <string name="shotsPlayerA">3</string>
     <string name="namePlayerB">Player B</string>
-    <string name="scorePlayerB">0</string>
+    <string name="scorePlayerB">301</string>
+    <string name="shotsPlayerB">3</string>
     <string name="plusOne">x1</string>
     <string name="plusTwo">x2</string>
     <string name="plusThree">x3</string>
