@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     int scorePlayerA, scorePlayerB, shotsLeft = 3, currentTurnScore;
-    boolean selectedPlayerA = false, selectedPlayerB = false, plusOne = false, plusTwo = false, plusThree = false;
+    boolean selectedPlayerA = false, selectedPlayerB = false, plusOne = false, plusTwo = false, plusThree = false, winner = false;
 
     /**
      * Starts the game and sets Player A as active player
@@ -244,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
             scoreCheck = scorePlayerA - currentTurnScore;
             if (scoreCheck == 0 && (bullsEye || plusTwo)) {
                 printScorePlayerA("Winner!!");
+                winner = true;
             } else if (scoreCheck <= 1) {
                 printScorePlayerA("Bust " + Integer.toString(scorePlayerA));
                 changeTurn();
@@ -281,7 +282,9 @@ public class MainActivity extends AppCompatActivity {
      * change turn after miss
      */
     public void zero(View view) {
-        changeTurn();
+        if (!winner) {
+            changeTurn();
+        }
     }
 
     /**
@@ -297,10 +300,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void getNumberFromText(View view) {
 
-        Button resultView = (Button) view;
-        String textContent = resultView.getText().toString();
-        setNumbers(textContent);
-
+        if (!winner) {
+            Button resultView = (Button) view;
+            String textContent = resultView.getText().toString();
+            setNumbers(textContent);
+        }
 
     }
 
