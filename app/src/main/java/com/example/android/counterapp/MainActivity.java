@@ -50,8 +50,22 @@ public class MainActivity extends AppCompatActivity {
             scorePlayerA = saveInstanceState.getInt("ScorePlayerA");
             scorePlayerB = saveInstanceState.getInt("ScorePlayerB");
             shotsLeft = saveInstanceState.getInt("ShotsLeft");
+            currentTurnScore = saveInstanceState.getInt("CurrentTurnScore");
             selectedPlayerA = saveInstanceState.getBoolean("SelectedPlayerA");
             selectedPlayerB = saveInstanceState.getBoolean("SelectedPlayerB");
+
+            if (currentTurnScore == 0) {
+                printScorePlayerA(Integer.toString(scorePlayerA));
+                printScorePlayerB(Integer.toString(scorePlayerB));
+            } else {
+                if (selectedPlayerA){
+                    printScorePlayerA(Integer.toString(scorePlayerA - currentTurnScore));
+                    printScorePlayerB(Integer.toString(scorePlayerB));
+                } else {
+                    printScorePlayerA(Integer.toString(scorePlayerA));
+                    printScorePlayerB(Integer.toString(scorePlayerB - currentTurnScore));
+                }
+            }
 
             Button selectedButton = (Button) findViewById(R.id.plusOne);
             selectedButton.setBackgroundResource(R.color.colorPrimaryDark);
@@ -94,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     printShotsPlayerB(Integer.toString(0));
                 }
+
+                printShotsPlayerA(Integer.toString(shotsLeft));
 
                 LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerB);
                 liPlayerA.setBackgroundResource(R.color.white);
