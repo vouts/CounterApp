@@ -13,46 +13,133 @@ public class MainActivity extends AppCompatActivity {
      * Define Global variables
      */
 
-    int scorePlayerA, scorePlayerB, shotsLeft = 3, currentTurnScore;
-    boolean selectedPlayerA = false, selectedPlayerB = false, plusOne = false, plusTwo = false, plusThree = false, winner = false;
+    int scorePlayerA = 301, scorePlayerB = 301, shotsLeft = 3, currentTurnScore = 0;
+    boolean selectedPlayerA = true, selectedPlayerB = false, plusOne = true, plusTwo = false, plusThree = false, winner = false;
 
     /**
-     * Starts the game and sets Player A as active player
+     * Saves Current state
      */
 
-    private void initialization() {
-        selectedPlayerA = true;
-        selectedPlayerB = false;
-        plusOne = true;
-        plusTwo = false;
-        plusThree = false;
-        scorePlayerB = 301;
-        scorePlayerA = 301;
-        shotsLeft = 3;
-        currentTurnScore = 0;
-        winner = false;
+    public void onSaveInstanceState(Bundle savedInstanceState) {
 
-        printShotsPlayerA(Integer.toString(shotsLeft));
-        printShotsPlayerB(Integer.toString(shotsLeft));
+        super.onSaveInstanceState(savedInstanceState);
 
-        printScorePlayerA(Integer.toString(scorePlayerA));
-        printScorePlayerB(Integer.toString(scorePlayerB));
-
-        LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerB);
-        liPlayerA.setBackgroundResource(R.color.white);
-
-        LinearLayout liPlayerB = (LinearLayout) findViewById(R.id.playerA);
-        liPlayerB.setBackgroundResource(R.color.currentPlayerBG);
-
-        TextView playerA = (TextView) findViewById(R.id.namePlayerB);
-        playerA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-
-        TextView playerB = (TextView) findViewById(R.id.namePlayerA);
-        playerB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+        savedInstanceState.putInt("ScorePlayerA", scorePlayerA);
+        savedInstanceState.putInt("ScorePlayerB", scorePlayerB);
+        savedInstanceState.putInt("ShotsLeft", shotsLeft);
+        savedInstanceState.putInt("CurrentTurnScore", currentTurnScore);
+        savedInstanceState.putBoolean("SelectedPlayerA", selectedPlayerA);
+        savedInstanceState.putBoolean("SelectedPlayerB", selectedPlayerB);
 
 
+        super.onSaveInstanceState(savedInstanceState);
 
     }
+
+    /**
+     * Restore saved state upon orientation change
+     */
+
+    protected void onRestoreInstanceState(Bundle saveInstanceState) {
+
+
+        super.onRestoreInstanceState(saveInstanceState);
+
+
+        if (saveInstanceState != null) {
+
+            scorePlayerA = saveInstanceState.getInt("ScorePlayerA");
+            scorePlayerB = saveInstanceState.getInt("ScorePlayerB");
+            shotsLeft = saveInstanceState.getInt("ShotsLeft");
+            selectedPlayerA = saveInstanceState.getBoolean("SelectedPlayerA");
+            selectedPlayerB = saveInstanceState.getBoolean("SelectedPlayerB");
+
+            Button selectedButton = (Button) findViewById(R.id.plusOne);
+            selectedButton.setBackgroundResource(R.color.colorPrimaryDark);
+
+            Button otherButton1 = (Button) findViewById(R.id.plusTwo);
+            otherButton1.setBackgroundResource(R.color.buttonColor);
+
+            Button otherButton2 = (Button) findViewById(R.id.plusThree);
+            otherButton2.setBackgroundResource(R.color.buttonColor);
+
+            plusOne = true;
+            plusTwo = false;
+            plusThree = false;
+
+            if (selectedPlayerB) {
+
+                if (scorePlayerA == 301 && scorePlayerB == 301 && currentTurnScore == 0) {
+                    printShotsPlayerA(Integer.toString(3));
+                } else {
+                    printShotsPlayerA(Integer.toString(0));
+                }
+                printShotsPlayerB(Integer.toString(shotsLeft));
+
+                LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerA);
+                liPlayerA.setBackgroundResource(R.color.white);
+
+                LinearLayout liPlayerB = (LinearLayout) findViewById(R.id.playerB);
+                liPlayerB.setBackgroundResource(R.color.currentPlayerBG);
+
+                TextView playerA = (TextView) findViewById(R.id.namePlayerA);
+                playerA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                TextView playerB = (TextView) findViewById(R.id.namePlayerB);
+                playerB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+
+
+            } else {
+                if (scorePlayerA == 301 && scorePlayerB == 301 && currentTurnScore == 0) {
+                    printShotsPlayerB(Integer.toString(3));
+                } else {
+                    printShotsPlayerB(Integer.toString(0));
+                }
+
+                LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerB);
+                liPlayerA.setBackgroundResource(R.color.white);
+
+                LinearLayout liPlayerB = (LinearLayout) findViewById(R.id.playerA);
+                liPlayerB.setBackgroundResource(R.color.currentPlayerBG);
+
+                TextView playerA = (TextView) findViewById(R.id.namePlayerB);
+                playerA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+                TextView playerB = (TextView) findViewById(R.id.namePlayerA);
+                playerB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+            }
+
+
+        } else {
+            printShotsPlayerA(Integer.toString(shotsLeft));
+            printShotsPlayerB(Integer.toString(shotsLeft));
+
+            printScorePlayerA(Integer.toString(scorePlayerA));
+            printScorePlayerB(Integer.toString(scorePlayerB));
+
+            LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerB);
+            liPlayerA.setBackgroundResource(R.color.white);
+
+            LinearLayout liPlayerB = (LinearLayout) findViewById(R.id.playerA);
+            liPlayerB.setBackgroundResource(R.color.currentPlayerBG);
+
+            TextView playerA = (TextView) findViewById(R.id.namePlayerB);
+            playerA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+            TextView playerB = (TextView) findViewById(R.id.namePlayerA);
+            playerB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+
+            Button selectedButton = (Button) findViewById(R.id.plusOne);
+            selectedButton.setBackgroundResource(R.color.colorPrimaryDark);
+
+            Button otherButton1 = (Button) findViewById(R.id.plusTwo);
+            otherButton1.setBackgroundResource(R.color.buttonColor);
+
+            Button otherButton2 = (Button) findViewById(R.id.plusThree);
+            otherButton2.setBackgroundResource(R.color.buttonColor);
+        }
+    }
+
 
     /**
      * Display score for player A
@@ -290,7 +377,43 @@ public class MainActivity extends AppCompatActivity {
      * change turn after miss
      */
     public void reset(View view) {
-        initialization();
+        selectedPlayerA = true;
+        selectedPlayerB = false;
+        plusOne = true;
+        plusTwo = false;
+        plusThree = false;
+        scorePlayerB = 301;
+        scorePlayerA = 301;
+        shotsLeft = 3;
+        currentTurnScore = 0;
+        winner = false;
+
+        printShotsPlayerA(Integer.toString(shotsLeft));
+        printShotsPlayerB(Integer.toString(shotsLeft));
+
+        printScorePlayerA(Integer.toString(scorePlayerA));
+        printScorePlayerB(Integer.toString(scorePlayerB));
+
+        LinearLayout liPlayerA = (LinearLayout) findViewById(R.id.playerB);
+        liPlayerA.setBackgroundResource(R.color.white);
+
+        LinearLayout liPlayerB = (LinearLayout) findViewById(R.id.playerA);
+        liPlayerB.setBackgroundResource(R.color.currentPlayerBG);
+
+        TextView playerA = (TextView) findViewById(R.id.namePlayerB);
+        playerA.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+
+        TextView playerB = (TextView) findViewById(R.id.namePlayerA);
+        playerB.setCompoundDrawablesWithIntrinsicBounds(R.drawable.play, 0, 0, 0);
+
+        Button selectedButton = (Button) findViewById(R.id.plusOne);
+        selectedButton.setBackgroundResource(R.color.colorPrimaryDark);
+
+        Button otherButton1 = (Button) findViewById(R.id.plusTwo);
+        otherButton1.setBackgroundResource(R.color.buttonColor);
+
+        Button otherButton2 = (Button) findViewById(R.id.plusThree);
+        otherButton2.setBackgroundResource(R.color.buttonColor);
     }
 
 
@@ -312,6 +435,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initialization();
+
+
+
     }
 }
