@@ -6,4 +6,5 @@
     <dimen name="buttonMarginRight">1dp</dimen>
     <dimen name="buttonMarginTop">1dp</dimen>
     <dimen name="imageMarginTop">5dp</dimen>
+    <dimen name="marginTopImagePortrait">20dp</dimen>
 </resources>

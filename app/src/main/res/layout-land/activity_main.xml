@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout style="@style/generalLandscape">
+
+        <RelativeLayout style="@style/basicLandscape">
+
+            <LinearLayout
+                android:id="@+id/Players"
+                style="@style/players">
+
+                <LinearLayout
+                    android:id="@+id/titles"
+                    style="@style/titles">
+
+                    <TextView
+                        android:id="@+id/playersTitle"
+                        style="@style/playerStyle"
+                        android:text="@string/playersTitle" />
+
+                    <TextView
+                        android:id="@+id/ScoreTitle"
+                        style="@style/playerStyle"
+                        android:text="@string/playersScore" />
+
+                    <TextView
+                        android:id="@+id/ShotsTitle"
+                        style="@style/playerStyle"
+                        android:text="@string/playersShots" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/playerA"
+                    style="@style/player">
+
+                    <TextView
+                        android:id="@+id/namePlayerA"
+                        style="@style/playerStyle"
+                        android:text="@string/namePlayerA" />
+
+                    <TextView
+                        android:id="@+id/scorePlayerA"
+                        style="@style/playerStyle"
+                        android:text="@string/scorePlayerA" />
+
+                    <TextView
+                        android:id="@+id/shotsPlayerA"
+                        style="@style/playerStyle"
+                        android:text="@string/shotsPlayerA" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/playerB"
+                    style="@style/player">
+
+                    <TextView
+                        android:id="@+id/namePlayerB"
+                        style="@style/playerStyle"
+                        android:text="@string/namePlayerB" />
+
+                    <TextView
+                        android:id="@+id/scorePlayerB"
+                        style="@style/playerStyle"
+                        android:text="@string/scorePlayerB" />
+
+                    <TextView
+                        android:id="@+id/shotsPlayerB"
+                        style="@style/playerStyle"
+                        android:text="@string/shotsPlayerB" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/dartsBoard"
+                style="@style/imageBoardLandscape"
+                android:src="@drawable/dartboard" />
+        </RelativeLayout>
+
+        <LinearLayout style="@style/basicLandscape">
+
+            <LinearLayout
+                android:id="@+id/buttonArea"
+                style="@style/buttonAreaLandscape">
+
+                <LinearLayout
+                    android:id="@+id/specialButtons"
+                    style="@style/buttonsRowLandscape">
+
+                    <Button
+                        android:id="@+id/reset"
+                        style="@style/buttonsLandscape"
+                        android:onClick="reset"
+                        android:text="@string/reset" />
+
+                    <Button
+                        android:id="@+id/plusOne"
+                        style="@style/buttonsLandscape"
+                        android:onClick="setPlusOne"
+                        android:text="@string/plusOne" />
+
+                    <Button
+                        android:id="@+id/plusTwo"
+                        style="@style/buttonsLandscape"
+                        android:onClick="setPlusTwo"
+                        android:text="@string/plusTwo" />
+
+                    <Button
+                        android:id="@+id/plusThree"
+                        style="@style/buttonsLandscape"
+                        android:onClick="setPlusThree"
+                        android:text="@string/plusThree" />
+
+                    <Button
+                        android:id="@+id/soClose"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/soClose" />
+
+                    <Button
+                        android:id="@+id/bullsEye"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/bullsEye" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow1"
+                    style="@style/buttonsRowLandscape">
+
+                    <Button
+                        android:id="@+id/zero"
+                        style="@style/buttonsLandscape"
+                        android:onClick="zero"
+                        android:text="@string/zero" />
+
+                    <Button
+                        android:id="@+id/one"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/one" />
+
+                    <Button
+                        android:id="@+id/two"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/two" />
+
+                    <Button
+                        android:id="@+id/three"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/three" />
+
+                    <Button
+                        android:id="@+id/four"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/four" />
+
+                    <Button
+                        android:id="@+id/five"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/five" />
+
+                    <Button
+                        android:id="@+id/six"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/six" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow2"
+                    style="@style/buttonsRowLandscape">
+
+
+                    <Button
+                        android:id="@+id/seven"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/seven" />
+
+                    <Button
+                        android:id="@+id/eight"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/eight" />
+
+                    <Button
+                        android:id="@+id/nine"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/nine" />
+
+                    <Button
+                        android:id="@+id/ten"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/ten" />
+
+                    <Button
+                        android:id="@+id/eleven"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/eleven" />
+
+                    <Button
+                        android:id="@+id/twelve"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/twelve" />
+
+                    <Button
+                        android:id="@+id/thirteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/thirteen" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonsRow3"
+                    style="@style/buttonsRowLandscape">
+
+
+                    <Button
+                        android:id="@+id/fourteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/fourteen" />
+
+                    <Button
+                        android:id="@+id/fifteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/fifteen" />
+
+                    <Button
+                        android:id="@+id/sixteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/sixteen" />
+
+                    <Button
+                        android:id="@+id/seventeen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/seventeen" />
+
+                    <Button
+                        android:id="@+id/eighteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/eighteen" />
+
+                    <Button
+                        android:id="@+id/nineteen"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/nineteen" />
+
+                    <Button
+                        android:id="@+id/twenty"
+                        style="@style/buttonsLandscape"
+                        android:onClick="getNumberFromText"
+                        android:text="@string/twenty" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
