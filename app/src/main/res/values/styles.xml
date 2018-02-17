@@ -54,8 +54,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_below">@id/Players</item>
-        <item name="android:scaleType">fitStart</item>
-        <item name="android:layout_marginTop">@dimen/marginTopImagePortrait</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:maxHeight">@dimen/imgMaxHeight</item>
     </style>
 
     <style name="imageBoardLandscape">
